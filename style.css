@@ -62,9 +62,10 @@ section div.header {
 }
 .navRight {
   display: flex;
+  flex-direction: wrap;
   flex-direction: row;
   margin-top: 0;
-  margin-left: 77rem;
+  margin-left: 75rem;
   text-align: center;
   padding-bottom: 0;
 }
@@ -296,6 +297,11 @@ section#contacts {
 
   /*sections*/
   section {
+    height: 1000px;
+    width: 100%;
+  }
+  section#home,
+  section#contacts {
     height: 100vh;
     background-size: 100%;
     background-position: left;
@@ -319,9 +325,7 @@ section#contacts {
 
   /*Section About*/
   section#about img {
-    height: 150px;
-    margin-bottom: 80px;
-    border-radius: 20px;
+    display: none;
   }
   .about-information p {
     margin-left: 0;
@@ -375,5 +379,274 @@ section#contacts {
   /*Section Contacts */
   .contact-box {
     width: 300px;
+  }
+}
+
+/* Media Query for Tablet */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* styles for tablet devices */
+
+  /* Navigation */
+  .navLeft h1 {
+    font-size: 1.5rem;
+  }
+  .navRight {
+    margin-left: 50rem;
+  }
+  .navRight a {
+    font-size: 1.2rem;
+  }
+  /* Hamburger Menu */
+  .hamburger {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+    margin-left: auto;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  .navRight {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(97, 96, 96, 0.863);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .navRight a {
+    margin: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px rgba(255, 255, 255, 0.192) solid;
+    background-color: rgba(128, 128, 128, 0);
+    border-radius: 0;
+  }
+  .navRight.show {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    background-color: rgb(88, 88, 88);
+  }
+
+  .navRight.show {
+    transform: translateX(0);
+  }
+
+  /* Add a overlay to the body when navRight is shown */
+  body.navRight-show {
+    overflow: hidden;
+    position: relative;
+  }
+
+  body.navRight-show::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .navRight {
+    z-index: 2;
+  }
+
+  /* Sections */
+  section {
+    height: 1000px;
+  }
+  section#home,
+  section#contacts {
+    background-size: 200vh;
+  }
+
+  /* Section Home */
+  section#home h1 {
+    font-size: 3rem;
+  }
+
+  /* Section About */
+  .about-content {
+    flex-direction: column;
+  }
+  .profile-image img {
+    height: 200px;
+  }
+  .about-information p {
+    margin-left: 20px;
+  }
+
+  /* Section Projects */
+  section#projects {
+    overflow: hidden;
+  }
+
+  .projects-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+  }
+
+  .project {
+    height: 50px;
+    width: 80%;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 10rem;
+  }
+
+  .project img {
+    border-radius: 10px;
+    height: 200px;
+  }
+
+  .next-button {
+    transform: translateY(-50%);
+    background-color: rgb(128, 128, 128);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .prev-button {
+    transform: translateY(-50%);
+    background-color: rgb(128, 128, 128);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  /* Section Contacts */
+  .contact-box {
+    width: 400px;
+  }
+}
+/* Media Query for Laptop */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  /* styles for laptop devices */
+
+  /* Navigation */
+  .navLeft h1 {
+    font-size: 1.8rem;
+  }
+  .navRight {
+    margin-left: 60rem;
+  }
+  .navRight a {
+    font-size: 1.5rem;
+  }
+
+  /* Sections */
+  section {
+    height: 900px;
+  }
+  section#home,
+  section#contacts {
+    background-size: 180vh;
+  }
+
+  /* Section Home */
+  section#home h1 {
+    font-size: 4rem;
+  }
+
+  /* Section About */
+  .about-content {
+    flex-direction: row;
+  }
+  .profile-image img {
+    height: 250px;
+  }
+  .about-information p {
+    margin-left: 30px;
+  }
+
+  /* Section Projects */
+  .projects-content {
+    flex-direction: row;
+  }
+  .project {
+    width: 80%;
+    margin-top: 60px;
+  }
+  .project img {
+    height: 300px;
+  }
+
+  /* Section Contacts */
+  .contact-box {
+    width: 500px;
+  }
+}
+
+/* Media Query for Desktop */
+@media only screen and (min-width: 1367px) {
+  /* styles for desktop devices */
+
+  /* Navigation */
+  .navLeft h1 {
+    font-size: 2rem;
+  }
+  .navRight {
+    margin-left: 70rem;
+  }
+  .navRight a {
+    font-size: 1.8rem;
+  }
+
+  /* Sections */
+  section {
+    height: 1000px;
+  }
+  section#home,
+  section#contacts {
+    background-size: 200vh;
+  }
+
+  /* Section Home */
+  section#home h1 {
+    font-size: 5rem;
+  }
+
+  /* Section About */
+  .about-content {
+    flex-direction: row;
+  }
+  .profile-image img {
+    height: 300px;
+  }
+  .about-information p {
+    margin-left: 40px;
+  }
+
+  /* Section Projects */
+  .projects-content {
+    flex-direction: row;
+  }
+  .project {
+    width: 80%;
+    margin-top: 80px;
+  }
+  .project img {
+    height: 350px;
+  }
+
+  /* Section Contacts */
+  .contact-box {
+    width: 600px;
   }
 }
