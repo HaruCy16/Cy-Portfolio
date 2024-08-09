@@ -22,6 +22,10 @@ hamburger.addEventListener("click", () => {
   navRight.classList.toggle("show");
 });
 
+hamburger.addEventListener("touchstart", () => {
+  navRight.classList.toggle("show");
+});
+
 document.addEventListener("click", (e) => {
   if (
     e.target !== navRight &&
