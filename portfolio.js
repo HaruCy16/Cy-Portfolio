@@ -22,7 +22,7 @@ hamburger.addEventListener("click", () => {
   navRight.classList.toggle("show");
 });
 
-hamburger.addEventListener("touchstart", () => {
+hamburger.addEventListener("mousedown", () => {
   navRight.classList.toggle("show");
 });
 
