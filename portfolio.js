@@ -22,14 +22,6 @@ hamburger.addEventListener("click", () => {
   navRight.classList.toggle("show");
 });
 
-hamburger.addEventListener("mousedown", () => {
-  navRight.classList.toggle("show");
-});
-
-hamburger.addEventListener("touchend", () => {
-  navRight.classList.toggle("show");
-});
-
 document.addEventListener("click", (e) => {
   if (
     e.target !== navRight &&
