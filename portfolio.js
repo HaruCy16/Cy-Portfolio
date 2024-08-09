@@ -21,13 +21,10 @@ const navRight = document.querySelector(".navRight");
 hamburger.addEventListener("click", () => {
   navRight.classList.toggle("show");
 });
-hamburger.addEventListener("touchend", () => {
+hamburger.addEventListener("touchstart", () => {
   navRight.classList.toggle("show");
 });
 
-hamburger.addEventListener("touch", () => {
-  navRight.classList.toggle("show");
-});
 document.addEventListener("click", (e) => {
   if (
     e.target !== navRight &&
