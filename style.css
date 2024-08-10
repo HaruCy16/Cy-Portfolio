@@ -126,6 +126,28 @@ section#home {
   background-color: rgb(27, 27, 27);
   cursor: pointer;
 }
+@keyframes textTransition {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.home-header h3 strong {
+  animation: textTransition 3s infinite;
+}
+
+.home-header h3 strong {
+  color: rgb(119, 119, 241);
+}
 /* About Section */
 section#about {
   background-color: rgba(28, 28, 44, 0.911);
@@ -146,6 +168,8 @@ section#about {
   margin-left: 20px;
   border-radius: 50%;
   height: 250px;
+  border: 0.3rem rgb(0, 0, 133) solid;
+  box-shadow: 0px 0px 20px rgb(0, 0, 88);
 }
 .about-information p {
   margin-left: 100px;
@@ -341,11 +365,42 @@ section#contacts {
   }
 
   /*Section About*/
+  section#about {
+    height: 70rem;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    background-color: rgba(190, 188, 188, 0.418);
+  }
   section#about img {
-    display: none;
+    display: flex;
+    height: 7rem;
+    margin-top: 1rem;
   }
   .about-information p {
     margin-left: 0;
+  }
+  .skills div {
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.103);
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.5s ease-in-out;
+  }
+  section#about button {
+    margin-top: 1rem;
   }
 
   /*Section Project*/

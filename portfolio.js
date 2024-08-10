@@ -35,6 +35,23 @@ document.addEventListener("click", (e) => {
   }
 });
 
+/*Change home strong word*/
+const change = document.querySelector("#changeWords");
+const words = [
+  "Front-End Developer",
+  "Freelancer",
+  "Video and Photo Editor",
+  "Future Software Developer",
+];
+let currentIndex = 0;
+
+function changeWord() {
+  change.textContent = words[currentIndex];
+  currentIndex = (currentIndex + 1) % words.length;
+}
+
+setInterval(changeWord, 3000);
+
 /*Project Buttons*/
 const nextButton = document.querySelector(".next-button");
 const prevButton = document.querySelector(".prev-button");
