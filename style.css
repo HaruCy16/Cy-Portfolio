@@ -470,6 +470,9 @@ section#contacts {
   }
 
   /*Section Contacts */
+  section#contacts {
+    background-size: 100rem;
+  }
   .contact-box {
     width: 300px;
   }
