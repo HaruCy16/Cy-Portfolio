@@ -9,11 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-/*Explore Button*/
-document.getElementById("explore").addEventListener("click", function () {
-  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-});
-
 /*Hamburger Menu*/
 const hamburger = document.querySelector(".hamburger");
 const navRight = document.querySelector(".navRight");
@@ -35,6 +30,32 @@ document.addEventListener("click", (e) => {
   }
 });
 
+/*Home Background change*/
+const section = document.getElementById("home");
+
+const images = [
+  "images/home.gif",
+  "images/home2.gif",
+  "images/home3.gif",
+  "images/home4.gif",
+];
+
+let backgroundIndex = 0;
+
+function changeBackgroundImage() {
+  section.style.backgroundImage = `url(${images[backgroundIndex]})`;
+  backgroundIndex = (backgroundIndex + 1) % images.length;
+}
+
+setInterval(changeBackgroundImage, 6000);
+
+changeBackgroundImage();
+
+/*Explore Button*/
+document.getElementById("explore").addEventListener("click", function () {
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+});
+
 /*Change home strong word*/
 const change = document.querySelector("#changeWords");
 const words = [
@@ -43,11 +64,12 @@ const words = [
   "Video and Photo Editor",
   "Future Software Developer",
 ];
-let currentIndex = 0;
+
+let wordIndex = 0;
 
 function changeWord() {
-  change.textContent = words[currentIndex];
-  currentIndex = (currentIndex + 1) % words.length;
+  change.textContent = words[wordIndex];
+  wordIndex = (wordIndex + 1) % words.length;
 }
 
 setInterval(changeWord, 3000);

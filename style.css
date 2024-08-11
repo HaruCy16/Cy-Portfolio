@@ -100,7 +100,6 @@ section {
 
 /* Home Section */
 section#home {
-  background-image: url("images/home.gif");
   background-repeat: no-repeat;
   background-size: 100%;
 }
