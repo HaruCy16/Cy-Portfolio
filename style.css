@@ -629,6 +629,7 @@ section#contacts {
 
   /* Section Contacts */
   .contact-box {
+    margin-top: 2rem;
     width: 400px;
   }
 }
