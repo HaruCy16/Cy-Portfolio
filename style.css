@@ -475,6 +475,7 @@ section#contacts {
   }
   .contact-box {
     width: 300px;
+    margin-top: 2rem;
   }
 }
 
