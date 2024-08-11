@@ -635,8 +635,6 @@ section#contacts {
 }
 /* Media Query for Laptop */
 @media only screen and (min-width: 1025px) and (max-width: 1366px) {
-  /* styles for laptop devices */
-
   /* Navigation */
   .navLeft h1 {
     font-size: 1.8rem;
