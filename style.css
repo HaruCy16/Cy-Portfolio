@@ -313,6 +313,7 @@ section#contacts {
     position: fixed;
     top: 0;
     right: 0;
+    margin-right: 0;
     width: 250px;
     height: 100vh;
     background-color: rgba(97, 96, 96, 0.863);
@@ -512,6 +513,7 @@ section#contacts {
     position: fixed;
     top: 0;
     right: 0;
+    margin-right: 0;
     width: 250px;
     height: 100vh;
     background-color: rgba(97, 96, 96, 0.863);
