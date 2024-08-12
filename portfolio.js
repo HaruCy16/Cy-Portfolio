@@ -30,8 +30,10 @@ document.addEventListener("click", (e) => {
   }
 });
 
-/*Home Background change*/
-const section = document.getElementById("home");
+/*Section Background change*/
+
+/*Home Background Change*/
+const homeSection = document.getElementById("home");
 
 const images = [
   "images/home.gif",
@@ -40,16 +42,37 @@ const images = [
   "images/home4.gif",
 ];
 
-let backgroundIndex = 0;
+let homeBackgroundIndex = 0;
 
 function changeBackgroundImage() {
-  section.style.backgroundImage = `url(${images[backgroundIndex]})`;
-  backgroundIndex = (backgroundIndex + 1) % images.length;
+  homeSection.style.backgroundImage = `url(${images[homeBackgroundIndex]})`;
+  homeBackgroundIndex = (homeBackgroundIndex + 1) % images.length;
 }
 
 setInterval(changeBackgroundImage, 6000);
 
 changeBackgroundImage();
+
+/*Contacts Background Change*/
+const contactsSection = document.getElementById("contacts");
+
+const imagesContacts = [
+  "images/contacts.gif",
+  "images/contacts2.gif",
+  "images/contacts3.gif",
+];
+
+let contactsBackgroundIndex = 0;
+
+function contactBackgroundChange() {
+  contactsSection.style.backgroundImage = `url(${imagesContacts[contactsBackgroundIndex]})`;
+  contactsBackgroundIndex =
+    (contactsBackgroundIndex + 1) % imagesContacts.length;
+}
+
+setInterval(contactBackgroundChange, 3000);
+
+contactBackgroundChange();
 
 /*Name Color Change*/
 const nameUser = document.getElementById("userName");

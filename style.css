@@ -21,7 +21,7 @@ section div.header {
   color: white;
   text-align: center;
   font-weight: bold;
-  border-bottom: 1px white solid;
+  border-bottom: 1px rgb(102, 102, 102) solid;
 }
 
 /*Navigation */
@@ -218,7 +218,7 @@ section#about {
 
 /* Projects Section */
 section#projects {
-  background-color: rgb(88, 92, 110);
+  background-color: rgb(48, 54, 83);
   margin-top: none;
 }
 .projects-content {
@@ -271,7 +271,7 @@ p.project-description {
 }
 /*Contacts Section*/
 section#contacts {
-  background-image: url("images/contacts.gif");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -280,6 +280,7 @@ section#contacts {
   width: 30%;
   margin-top: 150px;
   border: 1px solid rgb(73, 73, 73);
+  border-radius: 1.5rem;
   padding: 10px;
   text-align: center;
   background-color: rgba(45, 41, 83, 0.795);
@@ -476,6 +477,7 @@ section#contacts {
   /*Section Contacts */
   section#contacts {
     background-size: 100rem;
+    background-position: center;
   }
   .contact-box {
     width: 300px;
