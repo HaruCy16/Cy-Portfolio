@@ -35,7 +35,7 @@ let lastScrollTop = 0;
 const autoHideNavs = document.getElementsByClassName("navbar");
 
 function handleScroll() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   for (let i = 0; i < autoHideNavs.length; i++) {
     const autoHideNav = autoHideNavs[i];
@@ -63,10 +63,8 @@ function checkScreenWidth() {
   }
 }
 
-// Check on load
 checkScreenWidth();
 
-// Check on resize
 window.addEventListener("resize", checkScreenWidth);
 
 /*Section Background change*/
