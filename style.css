@@ -295,6 +295,16 @@ section#contacts {
 
 /* Media Query for Mobile */
 @media only screen and (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.7s ease;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+  }
   .navLeft h1 {
     display: none;
   }
@@ -366,6 +376,12 @@ section#contacts {
   section {
     height: 1000px;
     width: 100%;
+  }
+  section div.header {
+    padding-top: 4rem;
+  }
+  section#about div.header {
+    padding-top: 0.75rem;
   }
   section#home,
   section#contacts {

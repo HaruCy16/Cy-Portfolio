@@ -30,6 +30,45 @@ document.addEventListener("click", (e) => {
   }
 });
 
+/*NavBar Auto Hide*/
+let lastScrollTop = 0;
+const autoHideNavs = document.getElementsByClassName("navbar"); // Corrected class selector
+
+function handleScroll() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  for (let i = 0; i < autoHideNavs.length; i++) {
+    const autoHideNav = autoHideNavs[i];
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      autoHideNav.style.top = "-100px";
+    } else {
+      // Scrolling up
+      autoHideNav.style.top = "0";
+    }
+  }
+
+  lastScrollTop = scrollTop;
+}
+
+function checkScreenWidth() {
+  if (window.innerWidth <= 768) {
+    window.addEventListener("scroll", handleScroll);
+  } else {
+    window.removeEventListener("scroll", handleScroll);
+    for (let i = 0; i < autoHideNavs.length; i++) {
+      autoHideNavs[i].style.top = "0"; // Ensure the divs are visible if resizing to a larger screen
+    }
+  }
+}
+
+// Check on load
+checkScreenWidth();
+
+// Check on resize
+window.addEventListener("resize", checkScreenWidth);
+
 /*Section Background change*/
 
 /*Home Background Change*/
