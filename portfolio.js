@@ -79,8 +79,8 @@ document.addEventListener("scroll", function () {
     const sectionHeight = section.clientHeight;
 
     if (
-      window.pageYOffset >= sectionTop &&
-      window.pageYOffset < sectionTop + sectionHeight
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
     ) {
       currentSection = section.getAttribute("id");
     }
