@@ -32,7 +32,7 @@ document.addEventListener("click", (e) => {
 
 /*NavBar Auto Hide*/
 let lastScrollTop = 0;
-const autoHideNavs = document.getElementsByClassName("navbar"); // Corrected class selector
+const autoHideNavs = document.getElementsByClassName("navbar");
 
 function handleScroll() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -58,7 +58,7 @@ function checkScreenWidth() {
   } else {
     window.removeEventListener("scroll", handleScroll);
     for (let i = 0; i < autoHideNavs.length; i++) {
-      autoHideNavs[i].style.top = "0"; // Ensure the divs are visible if resizing to a larger screen
+      autoHideNavs[i].style.top = "0";
     }
   }
 }
