@@ -51,6 +51,20 @@ setInterval(changeBackgroundImage, 6000);
 
 changeBackgroundImage();
 
+/*Name Color Change*/
+const nameUser = document.getElementById("userName");
+
+const colors = ["#004aa4", "#666666", "#c64800", "#6d028c", "#198c24"];
+
+let colorIndex = 0;
+
+function changeFontColor() {
+  nameUser.style.color = colors[colorIndex];
+  colorIndex = (colorIndex + 1) % colors.length;
+}
+
+setInterval(changeFontColor, 2000);
+
 /*Explore Button*/
 document.getElementById("explore").addEventListener("click", function () {
   document.getElementById("about").scrollIntoView({ behavior: "smooth" });

@@ -114,17 +114,8 @@ section#home {
 .home-header h1 {
   font-size: 50px;
 }
-.home-header button {
-  border-radius: 5px;
-  width: 100px;
-  height: 40px;
-  background-color: rgba(128, 128, 128, 0.733);
-  border: none;
-  text-align: center;
-}
-.home-header button:hover {
-  background-color: rgb(27, 27, 27);
-  cursor: pointer;
+.home-header h1 strong {
+  transition: color 2s ease-in-out;
 }
 @keyframes textTransition {
   0% {
@@ -147,6 +138,18 @@ section#home {
 
 .home-header h3 strong {
   color: rgb(119, 119, 241);
+}
+.home-header button {
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  background-color: rgba(128, 128, 128, 0.733);
+  border: none;
+  text-align: center;
+}
+.home-header button:hover {
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
 }
 /* About Section */
 section#about {
