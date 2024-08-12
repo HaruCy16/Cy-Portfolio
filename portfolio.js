@@ -67,6 +67,34 @@ checkScreenWidth();
 
 window.addEventListener("resize", checkScreenWidth);
 
+/*Navigation auto glow*/
+document.addEventListener("scroll", function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-links");
+
+  let currentSection = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 60;
+    const sectionHeight = section.clientHeight;
+
+    if (
+      window.pageYOffset >= sectionTop &&
+      window.pageYOffset < sectionTop + sectionHeight
+    ) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href").includes(currentSection)) {
+      link.classList.add("active");
+    }
+  });
+});
+
 /*Section Background change*/
 
 /*Home Background Change*/

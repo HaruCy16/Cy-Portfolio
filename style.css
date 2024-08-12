@@ -89,10 +89,13 @@ section div.header {
   text-shadow: 2px 2px rgb(21, 21, 71);
   animation: glow 5s ease-in alternate infinite;
 }
+.navRight a.active {
+  animation: glow 5s ease-in-out alternate infinite;
+}
 .navRight a:focus {
   animation: glow 5s ease-in-out alternate infinite;
 }
-@-webkit-keyframes glow {
+@keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #14608e,
       0 0 40px #14608e, 0 0 50px #14608e, 0 0 60px #14608e, 0 0 70px #14608e;
