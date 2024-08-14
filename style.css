@@ -320,7 +320,9 @@ section#faq div.header {
   margin-top: 4rem;
   width: 50%;
   height: 35rem;
-  border: 3px rgba(163, 163, 163, 0.205) solid;
+  background-color: #08126d1e;
+  border: 3px rgba(163, 163, 163, 0.493) solid;
+  box-shadow: 0px 0px 20px rgb(87, 0, 158);
   border-radius: 20px;
   padding: 20px 20px 20px 20px;
   overflow-y: scroll; /* Enable vertical scrolling */

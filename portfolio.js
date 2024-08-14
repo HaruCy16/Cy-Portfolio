@@ -206,6 +206,8 @@ let scene, camera, renderer;
 function init() {
   // Create scene, camera, and renderer
   scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x240f47);
+
   camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
@@ -228,7 +230,7 @@ function init() {
   loader.load(
     "https://threejs.org/examples/fonts/helvetiker_regular.typeface.json",
     function (font) {
-      const geometry = new THREE.TextGeometry("?", {
+      const geometry = new THREE.TextGeometry("? | ?", {
         font: font,
         size: 5,
         height: 1,
@@ -238,14 +240,14 @@ function init() {
         bevelSize: 0.02,
         bevelSegments: 5,
       });
-      const material = new THREE.MeshBasicMaterial({ color: 0x0b78c4 });
+      const material = new THREE.MeshBasicMaterial({ color: 0x15b8dc });
       const mesh = new THREE.Mesh(geometry, material);
       scene.add(mesh);
       geometry.center();
 
       const animate = function () {
         requestAnimationFrame(animate);
-        mesh.rotation.y += 0.03;
+        mesh.rotation.y += 0.04;
         renderer.render(scene, camera);
       };
 
