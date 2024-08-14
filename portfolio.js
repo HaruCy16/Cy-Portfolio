@@ -198,3 +198,72 @@ prevButton.addEventListener("click", () => {
     projectsContent.style.left = `-${currentProject * projectWidth}px`;
   }
 });
+
+/*3d Background for FAQ's*/
+// 3D Text
+let scene, camera, renderer;
+
+function init() {
+  // Create scene, camera, and renderer
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+  );
+  camera.position.z = 20;
+
+  renderer = new THREE.WebGLRenderer({
+    canvas: document.getElementById("questionCanvas"),
+  });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  // Add light
+  const light = new THREE.AmbientLight(0xffffff);
+  scene.add(light);
+
+  // Load font and create 3D text
+  const loader = new THREE.FontLoader();
+  loader.load(
+    "https://threejs.org/examples/fonts/helvetiker_regular.typeface.json",
+    function (font) {
+      const geometry = new THREE.TextGeometry("?", {
+        font: font,
+        size: 5,
+        height: 1,
+        curveSegments: 5,
+        bevelEnabled: true,
+        bevelThickness: 0.03,
+        bevelSize: 0.02,
+        bevelSegments: 5,
+      });
+      const material = new THREE.MeshBasicMaterial({ color: 0x0b78c4 });
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+      geometry.center();
+
+      const animate = function () {
+        requestAnimationFrame(animate);
+        mesh.rotation.y += 0.03;
+        renderer.render(scene, camera);
+      };
+
+      animate();
+    }
+  );
+
+  function onResize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  }
+
+  window.addEventListener("resize", onResize);
+  onResize(); // Initial call to set the size correctly
+}
+
+init();

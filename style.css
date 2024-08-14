@@ -13,7 +13,7 @@ html {
 }
 section div.header {
   padding-top: 7.5rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-left: 20px;
   margin-right: 20px;
   padding-bottom: 20px;
@@ -64,7 +64,6 @@ section div.header {
 }
 .navRight {
   display: flex;
-  flex-direction: wrap;
   flex-direction: row;
   margin-top: 0;
   margin-right: 10rem;
@@ -86,8 +85,7 @@ section div.header {
   text-decoration: none;
 }
 .navRight a:hover {
-  text-shadow: 2px 2px rgb(21, 21, 71);
-  animation: glow 5s ease-in alternate infinite;
+  color: #261996;
 }
 .navRight a.active {
   animation: glow 5s ease-in-out alternate infinite;
@@ -292,6 +290,60 @@ p.project-description {
 .prev-button {
   display: none;
 }
+
+/*FAQ Section*/
+section#faq {
+  position: relative;
+  width: 100%; /* Full width of the viewport */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow to prevent canvas from spilling out */
+  margin: 0; /* Reset margins */
+  padding: 0; /* Reset paddings */
+  box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+section#faq div.header {
+  position: relative;
+  z-index: 2;
+}
+/* Ensure the canvas takes full size of the parent container */
+#questionCanvas {
+  position: absolute; /* Position absolutely within the parent container */
+  width: 100%; /* Full width of the parent container */
+  height: 100%; /* Full height of the parent container */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure it is below other content */
+  background: transparent; /* Ensure background is transparent */
+}
+.faq-container {
+  margin: auto;
+  margin-top: 4rem;
+  width: 50%; /* Set a specific width */
+  height: 35rem;
+  border: 3px rgba(163, 163, 163, 0.205) solid;
+  border-radius: 20px;
+  padding: 20px 20px 20px 20px;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-x: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* Container Scroll Bar*/
+.faq-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.question-answer p {
+  text-align: justify;
+  font-size: 1.7rem;
+}
+
 /*Contacts Section*/
 section#contacts {
   background-position: center;
@@ -338,7 +390,7 @@ section#contacts {
     height: 20px;
     width: 25px;
     margin-left: auto;
-    margin-right: 50px;
+    margin-right: 5rem;
     cursor: pointer;
   }
   /* Position navRight as an overlay on the right side of the screen */
@@ -743,7 +795,7 @@ section#contacts {
     font-size: 2rem;
   }
   .navRight {
-    margin-left: 70rem;
+    margin-left: 62rem;
   }
   .navRight a {
     font-size: 1.8rem;
