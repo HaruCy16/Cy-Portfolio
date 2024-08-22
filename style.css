@@ -75,7 +75,7 @@ section div.header {
   flex-direction: wrap;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 1.5rem;
+  margin-left: 2rem;
   font-size: 1rem;
   text-align: center;
   padding: 5px 10px 5px 10px;
@@ -88,20 +88,8 @@ section div.header {
   color: #261996;
 }
 .navRight a.active {
-  animation: glow 5s ease-in-out alternate infinite;
-}
-.navRight a:focus {
-  animation: glow 5s ease-in-out alternate infinite;
-}
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #14608e,
-      0 0 40px #14608e, 0 0 50px #14608e, 0 0 60px #14608e, 0 0 70px #14608e;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #0a005d, 0 0 40px #0a005d,
-      0 0 50px #0a005d, 0 0 60px #0a005d, 0 0 70px #0a005d, 0 0 80px #0a005d;
-  }
+  background-color: #5a5a5acb;
+  color: #261996;
 }
 
 /* Hamburger Menu */
@@ -177,9 +165,6 @@ section#about {
   background-color: rgba(28, 28, 44, 0.911);
   margin-top: none;
 }
-.about-information {
-  padding-left: 20px;
-}
 .about-content {
   display: flex;
   flex-direction: row;
@@ -192,8 +177,10 @@ section#about {
   margin-left: 20px;
   border-radius: 50%;
   height: 250px;
-  border: 0.3rem rgb(0, 0, 133) solid;
-  box-shadow: 0px 0px 20px rgb(0, 0, 88);
+  box-shadow: 0rem 0rem 3rem rgb(0, 0, 88);
+}
+.about-information {
+  padding-left: 20px;
 }
 .about-information p {
   margin-left: 100px;
@@ -289,6 +276,11 @@ p.project-description {
 .next-button,
 .prev-button {
   display: none;
+}
+
+/*Services Section*/
+section#services {
+  background-color: rgb(67, 73, 90);
 }
 
 /*FAQ Section*/
@@ -501,9 +493,6 @@ section#contacts {
     display: flex;
     height: 7rem;
     margin-top: 1rem;
-  }
-  .about-information p {
-    margin-left: 0;
   }
   .skills div {
     margin-right: 10px;
@@ -797,7 +786,7 @@ section#contacts {
     font-size: 2rem;
   }
   .navRight {
-    margin-left: 62rem;
+    margin-left: 50rem;
   }
   .navRight a {
     font-size: 1.8rem;
